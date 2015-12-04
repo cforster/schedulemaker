@@ -1,0 +1,5 @@
+todo:
+add start date and end date optional properties to schedule, to allow for repeated events
+also make an "alterations" collection, which references scheduled ids and changes any property on a given date
+also make an "events" collection, which has individual events
+schedule conflict? show an icon for conflict. click the icon to cycle events

@@ -6,8 +6,6 @@ Template.day.helpers({
         return Schedules.find({day: dayparam}).map(function(u) {
             var starttime = dayschedules[u.day][u.period].start;
             var endtime = dayschedules[u.day][u.period].end;
-            console.log(u)
-            console.log(dayschedules[u.day][u.period])
             var starthour = 800;
 
             u.scalestart = timescale(starttime-starthour)*1000;

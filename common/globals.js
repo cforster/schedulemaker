@@ -57,7 +57,9 @@ dayschedules = {
         D: {start: 1305, end: 1350},
         C: {start: 1355, end: 1440},
         Z: {start: 1600, end: 1800},
-        PM: {start: 1800, end: 2000}
+        PM: {start: 1800, end: 2000},
+        1: {start:810, end:900},
+        4: {start:1100, end:1145}
     },
     Th: {
         name: "Thursday",
@@ -65,6 +67,7 @@ dayschedules = {
         A: {start: 900, end: 945},
         D: {start: 1010, end: 1055},
         C: {start: 1100, end: 1145},
+        L: {start: 1150, end: 1245},
         E: {start: 1340, end: 1425},
         F: {start: 1430, end: 1515},
         Z: {start: 1600, end: 1800},
@@ -80,7 +83,8 @@ dayschedules = {
         G: {start: 1340, end: 1425},
         H: {start: 1430, end: 1515},
         Z: {start: 1600, end: 1800},
-        PM: {start: 1800, end: 2000}
+        PM: {start: 1800, end: 2000},
+        234: {start: 905, end: 1145}
     },
     F2: {
         name: "Friday 2",
@@ -88,6 +92,7 @@ dayschedules = {
         D: {start: 900, end: 945},
         H: {start: 1010, end: 1055},
         G: {start: 1100, end: 1145},
+        L: {start: 1150, end: 1245},
         F: {start: 1340, end: 1425},
         E: {start: 1430, end: 1515},
         Z: {start: 1600, end: 1800},
@@ -103,7 +108,8 @@ dayschedules = {
         C: {start: 1340, end: 1425},
         D: {start: 1430, end: 1515},
         Z: {start: 1600, end: 1800},
-        PM: {start: 1800, end: 2000}
+        PM: {start: 1800, end: 2000},
+        234: {start: 905, end: 1145}
     },
     F4: {
         name: "Friday 4",
@@ -129,7 +135,5 @@ timescale = function(time) {
     var minutes = time%100;
     var hours = Math.floor(time/100);
 
-    console.log("minutes: " +minutes);
-    console.log("hours:" + hours);
     return (hours/24)+(minutes/1440);
 };

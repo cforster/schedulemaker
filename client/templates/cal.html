@@ -2,35 +2,29 @@
     <style>
         .event {
             background: gray;
-            width: inherit;
-            border: 1px;
-            display: inline-block;
             opacity: .5;
-            position: fixed;
+            position: absolute;
+            width: 98%;
         }
-
-        #day {
-            width: inherit;
-            position:relative;
-        }
-        #calbox {
-            width: 500px;
-        }
-
     </style>
-
-    <div id="calbox">
-       <table><tr>
-           <td>{{> day da='Mo'}}</td>
-           </tr>
-       </table>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                {{> day da='Th' wi=4}}
+                {{> day da='F1' wi=4}}
+                {{> day da='F2' wi=4}}
+            </div>
+        </div>
     </div>
+    </div>
+
 </template>
 
 <template name="day">
-    <div id="day">
+    <div class="col-xs-{{wi}}" id="day">
         {{#each dayevents da}}
-            <div class="event" style="transform:translateY({{scalestart}}px); height:{{scaleduration}}px;">{{title}} ({{period}}) </div>
+            <div class="event period-{{period}}" style="transform:translateY({{scalestart}}px); height:{{scaleduration}}px;">{{title}} ({{period}}) </div>
         {{/each}}
     </div>
 </template>

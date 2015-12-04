@@ -2,18 +2,19 @@
     <style>
         .event {
             background: gray;
-            opacity: .5;
+            opacity: 1;
             position: absolute;
             width: 98%;
+            border-radius: 5px;
         }
     </style>
     <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
             <div class="row">
-                {{> day da='Th' wi=4}}
-                {{> day da='F1' wi=4}}
-                {{> day da='F2' wi=4}}
+                {{> day da='Mo' wi=4}}
+                {{> day da='Tu' wi=4}}
+                {{> day da='We' wi=4}}
             </div>
         </div>
     </div>
@@ -24,7 +25,7 @@
 <template name="day">
     <div class="col-xs-{{wi}}" id="day">
         {{#each dayevents da}}
-            <div class="event period-{{period}}" style="transform:translateY({{scalestart}}px); height:{{scaleduration}}px;">{{title}} ({{period}}) </div>
+            <div class="event period-{{period}}" style="top:{{scalestart}}px; height:{{scaleduration}}px;">{{title}} ({{period}}) </div>
         {{/each}}
     </div>
 </template>
